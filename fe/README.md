@@ -26,13 +26,13 @@ v21.6.1
 Clone the repository:
 
 ```
-$ git clone https://github.com/ziani96/scoop.git
+ git clone https://github.com/ziani96/scoop.git
 ```
 
 Navigate to the repository:
 
 ```
-$ cd scoop
+ cd be
 ```
 
 ### 2. Install the dependencies
@@ -40,7 +40,7 @@ $ cd scoop
 Use the `npm install` command to install the dependencies:
 
 ```
-$ npm install
+ npm install
 ```
 
 ### 3. Connect to a local host:
@@ -48,7 +48,7 @@ $ npm install
 Run the `npm run dev` script and follow the link to the local host:
 
 ```
-$ npm run dev
+ npm run dev
 ```
 
 The app is now accessible, usually at: http://localhost:5173/.
