@@ -16,13 +16,13 @@ This project uses Node.js and PostgreSQL to construct a backend database and API
 Clone the repository:
 
 ```
-$ git clone https://github.com/ziani96/scoop.git
+$ git clone https://github.com/ziani96/ScoopNews.git
 ```
 
 Navigate to the repository:
 
 ```
-$ cd scoop
+$ cd fe
 ```
 
 ## 2. Enviroment variables
