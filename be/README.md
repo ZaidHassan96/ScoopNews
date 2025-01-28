@@ -40,7 +40,7 @@ If your local database needs a password for access, include it in the files by a
 Use the `npm install` command to install the dependencies:
 
 ```
-$ npm install
+ npm install
 ```
 
 ### 4. Setup Local database
@@ -50,13 +50,13 @@ Run the following scripts to setup and seed the databases locally:
 • To create the database:
 
 ```
-$ npm run setup-dbs
+ npm run setup-dbs
 ```
 
 • To seed the database:
 
 ```
-$ npm run run seed
+ npm run run seed
 ```
 
 ### 5. Run server
@@ -64,7 +64,7 @@ $ npm run run seed
 Listen to incoming requests by running the following:
 
 ```
-$ node listen.js
+ node listen.js
 ```
 
 This enables you to make requests to the API via localhost:9090/api. You may use tools such as Insomnia to send requests containing JSON.
@@ -72,5 +72,5 @@ This enables you to make requests to the API via localhost:9090/api. You may use
 # Run test
 
 ```
-$ npm run test
+ npm run test
 ```
