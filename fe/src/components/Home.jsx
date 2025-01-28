@@ -113,23 +113,16 @@ const Home = ({
               fontSize: "40px",
             }}
           >
-            Loren Ipsum
+            About
           </h2>
 
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc
-            lobortis mattis aliquam faucibus purus in. Turpis nunc eget lorem
-            dolor sed viverra ipsum nunc aliquet. Dui sapien eget mi proin sed
-            libero. Magna sit amet purus gravida quis blandit turpis cursus in.
-            Eu lobortis elementum nibh tellus molestie. Duis convallis convallis
-            tellus id interdum velit. Pharetra diam sit amet nisl suscipit
-            adipiscing bibendum est. Nulla aliquet enim tortor at auctor urna
-            nunc. Amet commodo nulla facilisi nullam vehicula ipsum a. Libero
-            enim sed faucibus turpis in eu mi. Sit amet nisl purus in. Pharetra
-            diam sit amet nisl. Vitae elementum curabitur vitae nunc sed velit
-            dignissim. Neque vitae tempus quam pellentesque nec nam aliquam sem.
-            Mauris sit amet massa vitae tortor condimentum lacinia quis vel.
+            Welcome to ScoopNews, your go-to destination for the latest trending
+            articles in coding, football, and cooking. Stay informed with
+            up-to-date news, insightful analyses, and engaging stories across
+            these diverse fields. Whether you're a tech enthusiast, sports fan,
+            or culinary explorer, ScoopNews has something for you. Dive in and
+            discover the hottest topics today!
           </p>
         </Col>
       </Row>
