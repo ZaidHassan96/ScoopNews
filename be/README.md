@@ -22,7 +22,7 @@ Clone the repository:
 Navigate to the repository:
 
 ```
- cd fe
+ cd be
 ```
 
 ## 2. Enviroment variables
