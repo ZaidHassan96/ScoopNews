@@ -38,10 +38,13 @@ const Home = ({
       });
   }, [setGetArticles, sortBy, sortOrder, topic]);
 
-  const top3Articles = getArticles
-    .slice()
-    .sort((a, b) => b.votes - a.votes)
-    .slice(0, 3);
+  const top3Articles =
+    getArticles.length > 0
+      ? getArticles
+          .slice()
+          .sort((a, b) => b.votes - a.votes)
+          .slice(0, 3)
+      : null;
 
   if (isLoading) {
     return (

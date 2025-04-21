@@ -1,8 +1,13 @@
 import axios from "axios";
 
 const newsApi = axios.create({
-  baseURL: "https://news-v9aq.onrender.com/api",
+  baseURL: import.meta.env.VITE_API_URL,
 });
+
+console.log("Base URL:", import.meta.env.VITE_API_URL);
+
+
+console.log(import.meta.env.VITE_API_URL);
 
 const fetchArticles = (topic, sortBy, sortOrder, limit) => {
   let url = `/articles?sort_by=${sortBy}&order=${sortOrder}`;
@@ -13,26 +18,23 @@ const fetchArticles = (topic, sortBy, sortOrder, limit) => {
   if (limit) {
     url += `&limit=${limit}`;
   }
-
+  
   return newsApi.get(url).then((response) => {
+    console.log(response.data.articles)
     return response.data.articles;
   });
 };
 
 const fetchComments = (article_id) => {
-  return axios
-    .get(`https://news-v9aq.onrender.com/api/articles/${article_id}/comments`)
-    .then((response) => {
-      return response.data.comments;
-    });
+  return newsApi.get(`/articles/${article_id}/comments`).then((response) => {
+    return response.data.comments;
+  });
 };
 
 const fetchArticle = (article_id) => {
-  return axios
-    .get(`https://news-v9aq.onrender.com/api/articles/${article_id}`)
-    .then((response) => {
-      return response.data.article;
-    });
+  return newsApi.get(`/articles/${article_id}`).then((response) => {
+    return response.data.article;
+  });
 };
 
 const changeVotesNumber = (article_id, change) => {
@@ -42,10 +44,7 @@ const changeVotesNumber = (article_id, change) => {
   } else if (change === "decrement") {
     newVote = { inc_votes: -1 };
   }
-  return axios.patch(
-    `https://news-v9aq.onrender.com/api/articles/${article_id}`,
-    newVote
-  );
+  return newsApi.patch(`/articles/${article_id}`, newVote);
 };
 
 const postComment = (commentInput, loggedInUser, article_id) => {
@@ -53,37 +52,28 @@ const postComment = (commentInput, loggedInUser, article_id) => {
     username: loggedInUser.username,
     body: commentInput,
   };
-  return axios
-    .post(
-      `https://news-v9aq.onrender.com/api/articles/${article_id}/comments`,
-      commentData
-    )
+  return newsApi
+    .post(`/articles/${article_id}/comments`, commentData)
     .then((response) => {
       return response.data;
     });
 };
 
 const fetchUsers = () => {
-  return axios
-    .get(`https://news-v9aq.onrender.com/api/users`)
-    .then((response) => {
-      const users = response.data.users;
-      return users;
-    });
+  return newsApi.get(`/users`).then((response) => {
+    const users = response.data.users;
+    return users;
+  });
 };
 
 const deleteComment = (comment_id) => {
-  return axios.delete(
-    `https://news-v9aq.onrender.com/api/comments/${comment_id}`
-  );
+  return newsApi.delete(`/comments/${comment_id}`);
 };
 
 const fetchTopics = () => {
-  return axios
-    .get(`https://news-v9aq.onrender.com/api/topics`)
-    .then((response) => {
-      return response.data;
-    });
+  return newsApi.get(`/topics`).then((response) => {
+    return response.data;
+  });
 };
 
 export {
