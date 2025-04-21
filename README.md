@@ -6,6 +6,10 @@ This is a single-page application (SPA) built using **React**, powered by a **No
 
 ---
 
+## Deployed version:
+
+https://scooop.netlify.app/
+
 ## 📁 Project Structure
 
 ```bash
